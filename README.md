@@ -24,11 +24,14 @@ as the compiler evolves
 D-Scanner's architecture is based on the visitor design pattern. For most features
 that D-Scanner offers, the implementation consists in a custom visitor which can
 traverse an abstract syntax tree and also do a specific check for particular nodes.
+
 These visitors are relying on a 3rd party tool called `libdparse`.
 The desired approach is to replace `libdparse` with `dmd as a library` in all visitors
 and fixing the lacks discovered in `dmd as a libary` in the process.
+
 The extensive list with all the visitors is too long to be presented here, but can be
 seen [here](https://github.com/dlang-community/D-Scanner).
+
 A few examples of how replacing `libdparse` with `dmd-as-a-library` looks like can
 be seen [here](https://github.com/Dlang-UPB/D-scanner).
 
